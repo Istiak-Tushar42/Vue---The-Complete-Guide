@@ -4,7 +4,7 @@ const app = Vue.createApp({
 			enteredGoalValue: '',
 			goals: []
 		};
-	}, // v-if, v-else and v-else-if
+	},
 
 	methods: {
 		addGoal() {
