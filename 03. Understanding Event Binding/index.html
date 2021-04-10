@@ -19,22 +19,24 @@
 		<h2>Events in Action</h2>
 		<!-- WORKING WITH EVENT ARGUMENTS -->
 		<button v-on:click="add(5)">Add</button>
-		<button v-on:click.right="reduce()">Reduce</button>
+		<button @click="reduce()">Reduce</button>
+		<!-- <button @click.right="reduce()">Reduce</button> -->
 		<p v-once>Starting Counter: {{ counter }}</p>
 		<p>Result: {{ counter }}</p>
 
 		<!-- <input type="text" v-on:input="setName"> -->
 		<!-- DATA BINDING -->
+		<!-- <input type="text" :value="name" v-on:input="setName($event, 'Tushar')"> -->
 		<!-- <input type="text" v-bind:value="name" v-on:input="setName($event, 'Tushar')"> -->
 		<!-- TWO WAY DATA BINDING -->
 		<input type="text" v-model="name">
 		<input type="text" v-model="lastName">
-		<button v-on:click="resetInput">Reset Input</button>
+		<button @click="resetInput">Reset Input</button>
 		<!-- <p>Your Name: {{ name }}</p> -->
 		<!-- <p>Your Name: {{ outputFullName() }}</p> -->
 		<!-- <p>Your Name: {{ name + ' ' + 'Tushar' }}</p> -->
-		<!-- <p>Your Name: {{ fullName }}</p> -->
-		<p>Your Name: {{ fullname }}</p>
+		<p>Your Name: {{ fullName }}</p>
+		<!-- <p>Your Name: {{ fullname }}</p> -->
 
 		<!-- EVENT MODIFIER -->
 		<!-- <input type="text" v-on:input="setName($event, 'Tushar')" v-on:keyup.enter="confirmInput">
