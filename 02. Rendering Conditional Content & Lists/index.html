@@ -21,8 +21,17 @@
         <button @click="addGoal">Add Goal</button>
         <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
         <ul v-else>
-            <li v-for="goal in goals">{{ goal }}</li>
+            <li v-for="(goal, index) in goals">{{index}}. {{ goal }}</li>
         </ul>
+
+        <!-- V-FOR WORK WITH OBJECT AS WELL -->
+        <!-- <ul>
+            <li v-for="(value, key, index) in {name: 'Tushar', age: 28}">{{ key }}: {{ value }} - {{ index }}</li>
+        </ul> -->
+
+        <!-- <ul>
+            <li v-for="num in 10">{{ num }}</li>
+        </ul> -->
 
         <!-- <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p>
         <ul v-show="goals.length === 0">
