@@ -16,6 +16,46 @@ const app = Vue.createApp({
             this.message = this.$refs.userText.value;
         },
     },
+
+    // VUE APP LIFECYCLE HOOKS
+    // CREATION LIFECYCLE
+    beforeCreate() {
+        console.log('beforeCreate()');
+    },
+
+    created() {
+        console.log('created()');
+    },
+
+    beforeMount() {
+        console.log('beforeMount()');
+    },
+
+    mounted() {
+        console.log('mounted()');
+    },
+
+    // DATA CHANGES LIFECYCLE HOOKS
+    beforeUpdate() {
+        console.log('beforeUpdate()');
+    },
+
+    updated() {
+        console.log('updated()');
+    },
+
+    // UNMOUNT LIFECYCLE HOOKS
+    beforeUnmount() {
+        console.log('beforeUnmount()');
+    },
+
+    unmount() {
+        console.log('unmount()');
+    }
 });
 
 app.mount('#app');
+
+// setTimeout(function() {
+//     app.unmount();
+// }, 3000);
